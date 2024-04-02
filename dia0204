@@ -1,0 +1,6 @@
+UPDATE
+  alunos
+SET
+  favorites = 'não'
+WHERE
+  id = 3;
