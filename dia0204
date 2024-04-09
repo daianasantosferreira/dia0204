@@ -4,3 +4,57 @@ SET
   favorites = 'não'
 WHERE
   id = 3;
+ Atividade 2:
+
+  SELECT AVG(idade) AS media_idade
+FROM alunos
+WHERE nome LIKE '%b%';
+
+SELECT AVG(idade) AS media_idade
+FROM alunos
+WHERE nome LIKE '%b%';
+  media de alunos que tem 'b' no nome
+
+
+SELECT SUM(idade) AS media_idade
+FROM alunos
+WHERE nome LIKE '%s' AND SEXO = "Feminino";
+
+SELECT AVG(idade) AS media_idade
+FROM alunos
+WHERE nome LIKE 'G%'
+meidia da idade dos alunos que começam com 'g'
+
+SELECT SUM(idade) AS soma_idade
+FROM alunos
+WHERE nome LIKE '%no%' AND SEXO = 'Feminino';
+Soma da idade das alunas que tem nome iniciado em 'g'
+
+SELECT SUM(idade) AS soma_idade
+FROM alunos
+WHERE nome LIKE '%f%';
+soma da idade dos alunos que tem 'f' no nome
+
+Atividade 3:
+
+1- SELECT MAX(idade) AS idade_maxima
+FROM alunos
+WHERE nome LIKE '%c%' AND nome != 'Daiana dos Santos';
+
+2-SELECT MIN(idade) AS idade_minima
+FROM alunos
+WHERE nome LIKE '%f%' AND nome != 'Daiana dos Santos';
+
+3-SELECT MAX(idade) AS idade_maxima
+FROM alunos
+WHERE nome LIKE 'G%' AND SEXO = 'Feminino' AND nome != 'Daiana dos Santos';
+
+4-SELECT MIN(idade) AS idade_minima
+FROM alunos
+WHERE nome LIKE 'G%' AND SEXO = 'Masculino' AND nome != 'Daiana dos Santos';
+
+5-SELECT (SELECT MAX(idade) FROM alunos WHERE nome != 'Daiana dos Santos') +
+       (SELECT MIN(idade) FROM alunos WHERE nome != 'Daiana dos Santos') AS soma_idade;
+6-SELECT SUM(idade) AS soma_idade
+FROM alunos
+WHERE nome LIKE '%f%' AND nome != 'Daiana dos Santos';
